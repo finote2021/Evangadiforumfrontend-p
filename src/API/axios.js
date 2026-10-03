@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Create an instance of axios
 const axiosInstance = axios.create({
-  baseURL: "bfaffekwfbzyj4j41mho-mysql.services.clever-cloud.com", // Update with your base URL
+  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000",
 });
 
 // Request interceptor to include token in headers
